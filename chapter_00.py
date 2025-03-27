@@ -333,7 +333,7 @@ tensor = torch.ones(7)
 numpy_tensor = tensor.numpy()
 
 tensor+=1
-print(tensor, numpy_tensor)
+# print(tensor, numpy_tensor)
 #la fel, tensorul din numpy nu se schimba, se aloca o noua zona de memorie de fiecare data cand se intampla acest 'cast' din torch in numpy sau invers
 
 
@@ -350,3 +350,8 @@ print(tensor, numpy_tensor)
 # essentially what the random seed does is 'flavour' the randomness
 
 
+
+
+my_tensor = torch.tensor([1,2,3],device="cuda")
+
+print(my_tensor, my_tensor.device)
